@@ -14,7 +14,7 @@ int nCr(int num1,int num2){
 
     if (num1 < 1 || num2 < 1 )
     {
-        cout << "Entered invalid number." << endl;
+        cout << "Entered invalid number. Please enter a valid number." << endl;
         return -1;
     }
     
