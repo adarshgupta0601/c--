@@ -8,6 +8,7 @@ int rotateVector(vector<int> arr, int k){
     for(int i=0; i < arr.size();i++){
 
         //this is the formula since by taking modulus it gives the array from range 1-9
+        //this will shift the array by Kth place in a cyclic way
         temp[(i+k)%arr.size()] = arr[i];
     }
 
