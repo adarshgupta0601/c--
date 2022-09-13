@@ -12,7 +12,7 @@ void mergeArrays(int arr1[],int n, int arr2[],int m){
 
     }
 
-    //copying remaining elementof a array
+    //copying remaining element of a array
     while(i<n){
         arr3[k++]=arr1[i++];
     }
