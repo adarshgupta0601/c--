@@ -14,7 +14,6 @@ int reverseArray(int arr[],int n){
     }
     
 }
-
 void printArray(int arr[],int n){
     for (int i = 0; i < n; i++)
     {
@@ -25,8 +24,6 @@ void printArray(int arr[],int n){
 
 int main(){
     int arr[6]={23,3,45,32,21,78};
-
-
     reverseArray(arr,6);
     printArray(arr,6);
 }
