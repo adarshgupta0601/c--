@@ -17,16 +17,35 @@ class Node{
 void insertAtStart(Node* &head, int d){
     Node* temp = new Node(d);
     temp -> next = head;
+    //head = head -> next;
     head = temp;
 }
 
-void insertAtTail(Node* &tail, int d){
+void insertAtTail(Node* &tail, int d){          //here in this fucntion we have taken reference so changes can occur in linklist
+                                                // itself not in the copy of it
     Node* temp = new Node(d);
     tail -> next = temp;
-    tail = temp;
+    tail = tail -> next;
+    //tail = temp;
 }
 
-void print(Node* head){
+void insertAtPosition(Node* head, int pos, int d){    
+    Node* temp = head;
+    int cnt = 1;
+
+    //to traverse the node till position
+    while(cnt < pos-1){
+        temp = temp -> next;
+        cnt++;
+    }
+
+    Node* insert_mid = new Node(d);
+    insert_mid -> next = temp -> next;
+    temp -> next = insert_mid;
+
+}
+
+void print(Node* &head){
     Node* temp = head;
 
     while(head!=NULL){
@@ -55,6 +74,8 @@ int main(){
     insertAtStart(head,12);
 
     insertAtTail(tail,88);
+
+    insertAtPosition(head,2 ,21);
 
     print(head);
 
