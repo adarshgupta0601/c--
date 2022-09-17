@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int bubbleSort(int arr[],int size){
+int bubbleSort(int *arr,int size){
 
     for(int i = 0; i<size-1; i++){
         //for optimization of code if array is already sorted in first pass
