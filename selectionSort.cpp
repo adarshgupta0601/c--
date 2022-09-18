@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int sortedArray(int arr[],int size){
+int printArray(int arr[],int size){
     for (int i = 0; i < size; i++)
     {
         cout<<arr[i]<<" ";
@@ -21,7 +21,7 @@ int selectionSort(int arr[],int size){
         swap(arr[minIndex], arr[i]);
     }
     
-    sortedArray(arr,size);
+    printArray(arr,size);
 }
 
 int main(){
